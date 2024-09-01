@@ -4,8 +4,8 @@ const body = document.getElementById("body");
 const hr = document.getElementById("hr");
 const header = document.getElementById("header");
 
-// const countBirthDayDate = new Date("September 22, 2024 00:00:00").getTime();
-const countBirthDayDate = new Date("September 01, 2024 20:46:30").getTime();
+const countBirthDayDate = new Date("September 22, 2024 00:00:00").getTime();
+//const countBirthDayDate = new Date("September 01, 2024 20:46:30").getTime();
 const countDown = setInterval(() => {
   let currentTime = new Date().getTime();
   let timeRemaining = countBirthDayDate - currentTime;
@@ -28,6 +28,7 @@ const countDown = setInterval(() => {
     "s           ";
   para.innerText = countDownTime;
   if (timeRemaining < 0) {
+    
     hr.classList.add("display");
     header.innerHTML = "🎉Happy Birthday <span>Rashmi</span> <span>🎂</span>";
     body.classList.add("background");
